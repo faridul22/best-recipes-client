@@ -1,10 +1,19 @@
 import React, { useContext } from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavigationBar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     console.log(user)
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -19,12 +28,13 @@ const NavigationBar = () => {
                     <Nav>
                         {
                             user ? <>
-                                <Image title={`farid`} variant="top" src="https://i.ibb.co/kgqWycg/business-1.png" />
-                                <Link className='text-decoration-none text-muted ms-3' to="/login">LogOut</Link>
+                                <Image className='border border-secondary rounded-circle' title={user?.displayName} width={40} height={40} variant="top" src={user?.photoURL} />
+
+                                <Button onClick={handleLogOut} className='text-decoration-none text-muted ms-3'>LogOut</Button>
                             </> : <Link className='text-decoration-none text-muted mx-2' to="/login">Login</Link>
 
                         }
-                        <Link className='text-decoration-none text-muted mx-2' to="/register">Register</Link>
+                        {/* <Link className='text-decoration-none text-muted mx-2' to="/register">Register</Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
