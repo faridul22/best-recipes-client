@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyByEENS6FVsri-gOHPbBlPIjxGK3ZMoguY",
-    authDomain: "best-recipes-f43ba.firebaseapp.com",
-    projectId: "best-recipes-f43ba",
-    storageBucket: "best-recipes-f43ba.appspot.com",
-    messagingSenderId: "704734029550",
-    appId: "1:704734029550:web:08796dfee1bdf4ce31f5ff"
+    apiKey: import.meta.env.VITE_apiKey,
+    authDomain: import.meta.env.VITE_authDomain,
+    projectId: import.meta.env.VITE_projectId,
+    storageBucket: import.meta.env.VITE_storageBucket,
+    messagingSenderId: import.meta.env.VITE_messagingSenderId,
+    appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
