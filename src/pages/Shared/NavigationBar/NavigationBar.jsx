@@ -19,13 +19,11 @@ const NavigationBar = () => {
                     <Nav>
                         {
                             user ? <>
-                                <Image variant="top" src="holder.js/100px180" />
-                                <Link className='text-decoration-none text-muted ms-3' to="/login">Log Out</Link>
+                                <Image title={`farid`} variant="top" src="https://i.ibb.co/kgqWycg/business-1.png" />
+                                <Link className='text-decoration-none text-muted ms-3' to="/login">LogOut</Link>
                             </> : <Link className='text-decoration-none text-muted mx-2' to="/login">Login</Link>
 
                         }
-
-
                         <Link className='text-decoration-none text-muted mx-2' to="/register">Register</Link>
                     </Nav>
                 </Navbar.Collapse>
