@@ -3,22 +3,21 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({ chef }) => {
-
-    console.log(chef)
+    const { id, chefName, chefPicture, yearsExperience, numRecipes, likes } = chef;
     return (
         <Col>
-            <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+            <Card className='h-100 p-3'>
+                <Card.Img variant="top" src={chefPicture} />
                 <Card.Body>
-                    <Card.Title>Card title</Card.Title>
+                    <Card.Title>{chefName}</Card.Title>
                     <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
+                        <p>Experience: <small>{yearsExperience} +Years</small></p>
+                        <p>Numbers of Recipes: <small>{numRecipes}</small></p>
+                        <p>Likes: <small>{likes}</small></p>
                     </Card.Text>
                 </Card.Body>
-                <Link>
-                    <Button></Button>
+                <Link to={`/chefs/${id}`}>
+                    <Button variant='danger'>View Recipes</Button>
                 </Link>
             </Card>
         </Col>

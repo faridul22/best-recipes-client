@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import ChefCard from './ChefCard/ChefCard';
 
 const ChefSection = () => {
@@ -14,7 +13,12 @@ const ChefSection = () => {
     }, [])
     return (
         <Container>
-            <Row xs={1} md={2} className="g-4">
+            <div className='text-center mt-5 mb-3'>
+                <h2>Our Chefs</h2>
+                <p>Our chefs are skilled culinary artists with exceptional cooking techniques, leadership abilities, and business acumen. They create high-quality dishes, manage kitchen teams effectively, and deliver memorable dining experiences.</p>
+            </div>
+
+            <Row xs={1} md={2} lg={3} className="g-4">
                 {
                     chefs.map(chef => <ChefCard
                         key={chef.id}
