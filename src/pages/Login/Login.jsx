@@ -54,8 +54,8 @@ const Login = () => {
     }
     return (
         <Container className='mt-5'>
-            <div className='w-50 mx-auto rounded border-2 border border-success'>
-                <div className="text-center bg-success py-3 mb-4 text-white">
+            <div className='w-50 mx-auto rounded border-2 border border-danger'>
+                <div className="text-center bg-danger py-3 mb-4 text-white">
                     <h3> Please Login</h3>
                 </div>
                 <Form onSubmit={handleLogin} className=' pt-0 p-5'>
@@ -70,7 +70,7 @@ const Login = () => {
                     </Form.Group>
 
                     <div className='text-center mb-3'>
-                        <Button className='text-white w-50' variant="success" type="submit">
+                        <Button className='text-white w-50' variant="danger" type="submit">
                             Login
                         </Button>
                     </div>

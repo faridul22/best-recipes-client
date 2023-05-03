@@ -27,7 +27,7 @@ const NavigationBar = () => {
                                 <Image className='border border-secondary rounded-circle' title={user?.displayName} width={40} height={40} variant="top" src={user?.photoURL} />
 
                                 <Button variant='danger' onClick={handleLogOut} className='text-decoration-none text-light ms-3'>LogOut</Button>
-                            </> : <Link className='text-decoration-none text-light mx-2' to="/login">Login</Link>
+                            </> : <Link className='btn btn-danger text-decoration-none text-light mx-2' to="/login">Login</Link>
 
                         }
                         {/* <Link className='text-decoration-none text-muted mx-2' to="/register">Register</Link> */}
