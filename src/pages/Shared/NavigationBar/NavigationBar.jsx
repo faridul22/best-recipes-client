@@ -8,12 +8,7 @@ const NavigationBar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => {
-                console.log('user log out successfully')
-            })
-            .catch(error => {
-                console.log(error)
-            })
+
     }
 
     console.log(user)

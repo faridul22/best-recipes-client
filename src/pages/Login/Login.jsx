@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -27,6 +27,30 @@ const Login = () => {
             .catch(error => {
                 console.log(error)
             })
+    }
+
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then((result) => {
+                // The signed-in user info.
+                const user = result.user;
+                console.log(user)
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage)
+            });
+    }
+
+    const handleGithubLogin = () => {
+        loginWithGithub()
+            .then((result) => {
+                // The signed-in user info.
+                const user = result.user;
+                console.log(user)
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage)
+            });
     }
     return (
         <Container className='mt-5'>
@@ -56,9 +80,9 @@ const Login = () => {
                     </Form.Text>
                     <p className='text-center'>Or</p>
                     <div className='text-center'>
-                        <Button className='mb-2' variant="outline-primary"><FaGoogle></FaGoogle> Login With Google</Button>
+                        <Button onClick={handleGoogleLogin} className='mb-2' variant="outline-primary"><FaGoogle></FaGoogle> Login With Google</Button>
                         <br />
-                        <Button variant="outline-secondary"><FaGithub></FaGithub> Login With Github</Button>
+                        <Button onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login With Github</Button>
                     </div>
                 </Form>
             </div>
