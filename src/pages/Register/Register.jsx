@@ -68,7 +68,7 @@ const Register = () => {
                         {errorMessage && <span className='text-danger'>{errorMessage}</span>}
                     </div>
                     <div className='text-center mb-3'>
-                        <Button className='text-white w-50' variant="danger" type="submit">
+                        <Button className='text-white w-50 fw-bold' variant="danger" type="submit">
                             Register
                         </Button>
                     </div>

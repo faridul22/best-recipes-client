@@ -10,7 +10,7 @@ const FourOFour = () => {
                 <Card.Body>
                     <Card.Text>
                         <div className='my-auto text-center mb-5'>
-                            <Link to='/'><Button variant='danger'>Go to Home Page</Button></Link>
+                            <Link to='/'><Button className='fw-bold' variant='danger'>Go to Home Page</Button></Link>
                         </div>
                     </Card.Text>
                 </Card.Body>

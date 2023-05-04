@@ -35,7 +35,7 @@ const LatestNewsSection = () => {
                                 <Form.Check type="checkbox" label="Accept our Trams & Conditions" />
                             </Form.Group>
                             <div className='w-50 mx-auto'>
-                                <Button className='w-100' variant="danger" type="submit">
+                                <Button className='w-100 fw-bold' variant="danger" type="submit">
                                     Subscribe Now
                                 </Button>
                             </div>

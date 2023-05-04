@@ -76,7 +76,7 @@ const Login = () => {
                         {errorMessage && <span className='text-danger'>{errorMessage}</span>}
                     </div>
                     <div className='text-center mb-3'>
-                        <Button className='text-white w-50' variant="danger" type="submit">
+                        <Button className='text-white w-50 fw-bold' variant="danger" type="submit">
                             Login
                         </Button>
                     </div>
@@ -86,9 +86,9 @@ const Login = () => {
                     </Form.Text>
                     <p className='text-center'>Or</p>
                     <div className='text-center'>
-                        <Button onClick={handleGoogleLogin} className='mb-2' variant="outline-primary"><FaGoogle></FaGoogle> Login With Google</Button>
+                        <Button onClick={handleGoogleLogin} className='mb-2 fw-bold' variant="outline-primary"><FaGoogle></FaGoogle> Login With Google</Button>
                         <br />
-                        <Button onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login With Github</Button>
+                        <Button className='fw-bold' onClick={handleGithubLogin} variant="outline-secondary"><FaGithub></FaGithub> Login With Github</Button>
                     </div>
                 </Form>
             </div>

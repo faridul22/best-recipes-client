@@ -35,7 +35,7 @@ const Recipe = ({ recipe }) => {
                     <p className='d-flex align-items-center flex-grow-1'>
                         <Rating style={{ maxWidth: 150 }} value={rating} readOnly /> <span className='ms-2'>{rating}</span>
                     </p>
-                    <Button onClick={handleFavorite} disabled={!favorite} variant='danger' className=''> <FaRegBookmark />Favorite</Button>
+                    <Button onClick={handleFavorite} disabled={!favorite} variant='danger' className='fw-bold'> <FaRegBookmark />Favorite</Button>
                 </div>
             </Card>
         </Col>

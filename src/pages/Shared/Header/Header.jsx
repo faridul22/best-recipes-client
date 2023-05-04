@@ -26,7 +26,7 @@ const Header = () => {
                         <p>
                             Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
                         </p>
-                        <Button className='' variant='danger'>View Our Shop</Button>
+                        <Button className='fw-bold' variant='danger'>View Our Shop</Button>
 
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -43,7 +43,7 @@ const Header = () => {
                         <p>
                             Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
                         </p>
-                        <Button className='' variant='danger'>View Our Shop</Button>
+                        <Button className='fw-bold' variant='danger'>View Our Shop</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -59,7 +59,7 @@ const Header = () => {
                         <p>
                             Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
                         </p>
-                        <Button className='' variant='danger'>View Our Shop</Button>
+                        <Button className='fw-bold' variant='danger'>View Our Shop</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
