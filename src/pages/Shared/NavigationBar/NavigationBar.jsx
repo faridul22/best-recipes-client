@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import ActiveLink from '../../../routes/ActiveRoute/ActiveLink';
 
 const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -17,14 +18,14 @@ const NavigationBar = () => {
                 <Navbar.Brand href="#home">Best Recipes</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto">
-                        <Link className='text-decoration-none text-light mx-2' to='/'>Home</Link>
-                        <Link className='text-decoration-none text-light mx-2' to='/blogs'>Blogs</Link>
+                    <Nav className="mx-auto text-light">
+                        <ActiveLink to='/'>Home</ActiveLink>
+                        <ActiveLink to='/blogs'>Blogs</ActiveLink>
                     </Nav>
                     <Nav>
                         {
                             user ? <>
-                                <Image className='border border-secondary rounded-circle' title={user?.displayName} width={40} height={40} variant="top" src={user?.photoURL} />
+                                <Image className='border border-secondary text-light rounded-circle' title={user?.displayName} width={40} height={40} variant="top" src={user?.photoURL} />
 
                                 <Button variant='danger' onClick={handleLogOut} className='text-decoration-none text-light ms-3'>LogOut</Button>
                             </> : <Link className='btn btn-danger text-decoration-none text-light mx-2' to="/login">Login</Link>

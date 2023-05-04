@@ -35,6 +35,7 @@ const Login = () => {
                 // The signed-in user info.
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true });
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage)
@@ -47,6 +48,7 @@ const Login = () => {
                 // The signed-in user info.
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true });
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage)

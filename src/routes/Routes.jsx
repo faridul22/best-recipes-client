@@ -5,8 +5,9 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Blogs from "../pages/Blogs/Blogs";
 import ChefRecipes from "../pages/ChefRecipes/ChefRecipes";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import FourOFour from "../pages/FourOFour/FourOFour";
+import LoginLayout from "../layouts/LoginLayout";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,18 @@ const router = createBrowserRouter([
                 path: 'blogs',
                 element: <Blogs></Blogs>
             },
+
+            {
+                path: '/chefs/:id',
+                element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://best-recipes-server-faridul22.vercel.app/chefs/${params.id}`)
+            },
+        ]
+    },
+    {
+        path: '/',
+        element: <LoginLayout></LoginLayout>,
+        children: [
             {
                 path: 'login',
                 element: <Login></Login>
@@ -29,16 +42,12 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: <Register></Register>
             },
-            {
-                path: '/chefs/:id',
-                element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
-            },
-            {
-                path: '*',
-                element: <FourOFour></FourOFour>
-            }
         ]
+
+    },
+    {
+        path: '*',
+        element: <FourOFour></FourOFour>
     }
 ])
 

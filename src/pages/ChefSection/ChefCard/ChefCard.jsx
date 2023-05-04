@@ -7,7 +7,7 @@ const ChefCard = ({ chef }) => {
     return (
         <Col>
             <Card className='h-100 p-3'>
-                <Card.Img variant="top" src={chefPicture} />
+                <Card.Img loading='lazy' variant="top" src={chefPicture} />
                 <Card.Body>
                     <Card.Title>{chefName}</Card.Title>
                     <Card.Text>
