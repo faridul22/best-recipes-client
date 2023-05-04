@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { FaPhoneAlt, FaPhoneSquareAlt } from 'react-icons/fa';
+import { FaCopyright, FaPhoneAlt, FaPhoneSquareAlt } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -32,7 +32,7 @@ const Footer = () => {
             </Container>
             <hr className='w-75 mx-auto text-secondary' />
             <div className='py-3'>
-                <p className='text-muted text-center'><small>Copyright 2023</small></p>
+                <p className='text-muted text-center'><FaCopyright className='text-light'></FaCopyright> <small>Copyright 2023</small></p>
             </div>
         </div>
     );
