@@ -15,10 +15,10 @@ const NavigationBar = () => {
     return (
         <Navbar className='text-white' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Best Recipes</Navbar.Brand>
+                <Navbar.Brand href="#home" className='fw-bold fs-2'>Best Recipes</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto text-light">
+                    <Nav className="mx-auto text-light fw-bold">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/blogs'>Blogs</ActiveLink>
                     </Nav>

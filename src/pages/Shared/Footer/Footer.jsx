@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { FaPhoneAlt, FaPhoneSquareAlt } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -21,7 +22,10 @@ const Footer = () => {
                         <p className='m-0  text-secondary'><small>Client Reviews</small></p>
                     </Col>
                     <Col sm={12} lg={4}>
-                        <h1 className='text-white'>Don't Hesitated <br /> To Contact With <br /> Us Say Hello </h1>
+                        <h2 className='text-white fw-bold'>Don't Hesitated <br /> To Contact With <br /> Us Say Hello </h2>
+                        <p className='mt-3'>
+                            <FaPhoneSquareAlt className='text-danger bg-light fs-1 fw-bold'></FaPhoneSquareAlt> <span className='text-light ms-3'> 00999556568</span>
+                        </p>
                     </Col>
 
                 </Row>

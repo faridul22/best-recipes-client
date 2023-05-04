@@ -30,7 +30,6 @@ const PopularRecipeSection = () => {
                     ></PopularCard>)
                 }
             </Row>
-            <hr />
         </Container>
     );
 };
