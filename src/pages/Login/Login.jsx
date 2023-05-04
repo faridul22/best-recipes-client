@@ -5,7 +5,7 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    const { signIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
+    const { signIn, loginWithGoogle, loginWithGithub, errorMessage, setErrorMessage } = useContext(AuthContext);
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -21,10 +21,11 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                // console.log(loggedUser)
                 navigate(from, { replace: true });
+                setErrorMessage('')
             })
             .catch(error => {
+                setErrorMessage('Your email and password did not match')
                 console.log(error)
             })
     }
@@ -49,13 +50,14 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 navigate(from, { replace: true });
+
             }).catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage)
             });
     }
     return (
-        <Container className='mt-5'>
+        <Container className='my-5'>
             <div className='w-50 mx-auto rounded border-2 border border-danger'>
                 <div className="text-center bg-danger py-3 mb-4 text-white">
                     <h3> Please Login</h3>
@@ -70,7 +72,9 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control name='password' type="password" placeholder="Password" />
                     </Form.Group>
-
+                    <div className='text-center  align-items-center mb-2'>
+                        {errorMessage && <span className='text-danger'>{errorMessage}</span>}
+                    </div>
                     <div className='text-center mb-3'>
                         <Button className='text-white w-50' variant="danger" type="submit">
                             Login

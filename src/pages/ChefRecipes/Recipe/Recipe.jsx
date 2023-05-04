@@ -26,9 +26,10 @@ const Recipe = ({ recipe }) => {
                     <p><strong >Cooking method: </strong> {method}</p>
                 </div>
                 <div>
-                    <p>
-                        <strong>Ingredients</strong> {ingredients.map((ingredient) => <span className='my-0'>{ingredient},</span>)}
-                    </p>
+                    <p className='my-0'><strong>Ingredients:</strong> </p>
+                    <ol>
+                        {ingredients.map((ingredient) => <li className='my-0'>{ingredient},</li>)}
+                    </ol>
                 </div>
                 <div className='my-auto d-flex align-items-center'>
                     <p className='d-flex align-items-center flex-grow-1'>

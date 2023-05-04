@@ -10,7 +10,7 @@ const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [error, setError] = useState('')
+    const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(true)
 
     // console.log(user)
@@ -63,6 +63,8 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        errorMessage,
+        setErrorMessage,
         createUser,
         signIn,
         updateUserProfile,

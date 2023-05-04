@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import LazyLoad from 'react-lazy-load';
+import { FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ChefCard = ({ chef }) => {
@@ -17,7 +18,7 @@ const ChefCard = ({ chef }) => {
                     <Card.Text>
                         <p>Experience: <small>{yearsExperience} +Years</small></p>
                         <p>Numbers of Recipes: <small>{numRecipes}</small></p>
-                        <p>Likes: <small>{likes}</small></p>
+                        <p className='text-danger'><strong><FaThumbsUp></FaThumbsUp> Like:</strong> {likes}</p>
                     </Card.Text>
                 </Card.Body>
                 <Link to={`/chefs/${id}`}>
