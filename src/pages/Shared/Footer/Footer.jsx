@@ -23,11 +23,10 @@ const Footer = () => {
                     </Col>
                     <Col sm={12} lg={4}>
                         <h5 className='text-white'>Quick Links</h5>
-                        <p className='m-0  text-secondary'><small>Our Popular Menu</small></p>
-                        <p className='m-0  text-secondary'><small>Pricing Plan</small></p>
-                        <p className='m-0  text-secondary'><small>Service & Setting</small></p>
-                        <p className='m-0  text-secondary'><small>Our Upcoming Food</small></p>
-                        <p className='m-0  text-secondary'><small>Client Reviews</small></p>
+                        <p className='my-0 text-secondary btn'><small>Our Popular Menu</small></p> <br />
+                        <p className='m-0 text-secondary btn'><small>Pricing Plan</small></p> <br />
+                        <p className='my-0 text-secondary btn'><small>Our Upcoming Food</small></p> <br />
+                        <p className='my-0 text-secondary btn'><small>Client Reviews</small></p>
                     </Col>
                     <Col sm={12} lg={4}>
                         <h2 className='text-white fw-bold'>Don't Hesitated <br /> To Contact With <br /> Us Say Hello </h2>
@@ -40,7 +39,7 @@ const Footer = () => {
             </Container>
             <hr className='w-75 mx-auto text-secondary' />
             <div className='py-3'>
-                <p className='text-muted text-center'><FaCopyright className='text-light'></FaCopyright> <small>Copyright 2023.Best Recipe All Right Reserved.</small></p>
+                <p className='text-muted text-center'><FaCopyright className='text-muted'></FaCopyright> <small>Copyright 2023.Best Recipe All Right Reserved.</small></p>
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ const ContactSection = () => {
                     <hr className='w-50 mx-auto border-danger bg-danger border border-1' />
                 </div>
                 <Col sm={12} md={6}>
-                    <Image src="https://i.ibb.co/WnsLqbm/worker-with-cart-sign.jpg" width={500} />;
+                    <Image fluid src="https://i.ibb.co/WnsLqbm/worker-with-cart-sign.jpg" width={500} />;
                 </Col>
 
                 <Col sm={12} md={6} className='my-auto border-start border-danger border-4'>

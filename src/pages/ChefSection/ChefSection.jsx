@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ChefCard from './ChefCard/ChefCard';
 import { AuthContext } from '../../providers/AuthProvider';
-import Spinner from '../Shared/LoaderSpinner/LoaderSpinner';
 
 const ChefSection = () => {
     const [chefs, setChefs] = useState([]);
@@ -11,12 +10,7 @@ const ChefSection = () => {
     useEffect(() => {
         fetch('https://best-recipes-server-faridul22.vercel.app/chefs')
             .then(res => res.json())
-            .then(data => {
-                if (!loading) {
-                    return <Spinner></Spinner>
-                }
-                setChefs(data)
-            })
+            .then(data => { setChefs(data) })
             .catch(error => console.log(error))
     }, [])
     return (

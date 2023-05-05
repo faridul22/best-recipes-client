@@ -24,7 +24,7 @@ const Header = () => {
                     <Carousel.Caption className='my-auto align-items-center h-50'>
                         <h1>WELCOME TO <br /> RECIPE COMMUNITY</h1>
                         <p>
-                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
+                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.Our chefs are skilled culinary artists with exceptional cooking techniques.
                         </p>
                         <Button className='fw-bold' variant='danger'>View Our Shop</Button>
 
@@ -41,7 +41,7 @@ const Header = () => {
                     <Carousel.Caption className='my-auto align-items-center h-50'>
                         <h1>WELCOME TO <br /> RECIPE COMMUNITY</h1>
                         <p>
-                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
+                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.Our chefs are skilled culinary artists with exceptional cooking techniques.
                         </p>
                         <Button className='fw-bold' variant='danger'>View Our Shop</Button>
                     </Carousel.Caption>
@@ -57,7 +57,7 @@ const Header = () => {
                     <Carousel.Caption className='my-auto align-items-center h-50'>
                         <h1>WELCOME TO <br /> RECIPE COMMUNITY</h1>
                         <p>
-                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.
+                            Our Chefs are create high-quality dishes.We Provide the best service in the other recipe community.Our chefs are skilled culinary artists with exceptional cooking techniques.
                         </p>
                         <Button className='fw-bold' variant='danger'>View Our Shop</Button>
                     </Carousel.Caption>

@@ -1,21 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import PopularCard from './PopularCard/PopularCard';
 
 const PopularRecipeSection = () => {
     const [popularRecipes, setPopularRecipes] = useState([]);
-    const { loading } = useContext(AuthContext)
 
     useEffect(() => {
         fetch('https://best-recipes-server-faridul22.vercel.app/popularRecipes')
             .then(res => res.json())
-            .then(data => {
-                if (!loading) {
-                    return <Spinner></Spinner>
-                }
-                setPopularRecipes(data)
-            })
+            .then(data => { setPopularRecipes(data) })
             .catch(error => console.log(error))
     }, [])
     return (
