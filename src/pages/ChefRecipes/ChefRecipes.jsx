@@ -39,7 +39,7 @@ const ChefRecipes = () => {
                 </Row>
             </Card>
             <Row className='my-5'>
-                <h2 className='text-center text-danger mb-4'>Cooking Recipes</h2>
+                <h2 className='text-center fw-bold text-danger mb-4'>Cooking Recipes</h2>
                 {recipes.map((recipe, i) => <Recipe
                     key={recipe.i}
                     recipe={recipe}

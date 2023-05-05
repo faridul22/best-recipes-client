@@ -15,9 +15,9 @@ const PopularCard = ({ popular }) => {
 
                 <Card.Body>
                     <Card.Text className='align-items-center'>
-                        <div className='d-flex text-danger fw-bold'>
-                            <p className='flex-grow-1 '><FaStopwatch></FaStopwatch> <small>{making_time}</small></p>
-                            <p><FaDollarSign></FaDollarSign> Price: <small>{price}</small></p>
+                        <div className='d-flex text-danger w-75 mx-auto fw-bold'>
+                            <p className='flex-grow-1 text-align-center'><FaStopwatch></FaStopwatch> <small>{making_time}</small></p>
+                            <p className='text-align-center'><FaDollarSign></FaDollarSign> Price: <small>{price}</small></p>
                         </div>
                         <h4 className='text-center fw-semibold'>{recipe_name}</h4>
                     </Card.Text>

@@ -19,9 +19,9 @@ const PopularRecipeSection = () => {
             .catch(error => console.log(error))
     }, [])
     return (
-        <Container className='my-5'>
-            <hr />
-            <h2 className='mb-3'>Our Popular Recipes</h2>
+        <Container className='my-5 pt-3'>
+            <hr className='mb-3' />
+            <h2 className='mb-3 fw-bold'>Popular Recipes</h2>
             <Row xs={1} md={3} className="g-4">
                 {
                     popularRecipes.map(popular => <PopularCard

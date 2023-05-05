@@ -23,12 +23,15 @@ const Recipe = ({ recipe }) => {
                 <Card.Title className='text-danger w-100'><h4>{name}</h4></Card.Title>
                 <hr className='text-danger' />
                 <div>
-                    <p><strong >Cooking method: </strong> {method}</p>
+                    <p>
+                        <strong >Cooking method: </strong>
+                        <span className='text-muted'>{method}</span>
+                    </p>
                 </div>
                 <div>
                     <p className='my-0'><strong>Ingredients:</strong> </p>
                     <ol>
-                        {ingredients.map((ingredient) => <li className='my-0'>{ingredient},</li>)}
+                        {ingredients.map((ingredient) => <li className='my-0 text-muted'>{ingredient},</li>)}
                     </ol>
                 </div>
                 <div className='my-auto d-flex align-items-center'>

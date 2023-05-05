@@ -20,9 +20,10 @@ const ChefSection = () => {
             .catch(error => console.log(error))
     }, [])
     return (
-        <Container className='bg-light px-5 pt-2 pb-4  my-4 rounded-2'>
+        <Container className='bg-light px-5 pt-1 pb-4  my-5 rounded-2'>
             <div className='text-center mt-5 mb-3'>
-                <h2 className='text-danger fw-bold fs-1 mb-3'>Our Chefs</h2>
+                <h2 className='fw-bold fs-1 mb-3'>Our Chefs</h2>
+                <hr className='w-25 mx-auto' />
                 <p className='text-muted'>Our chefs are skilled culinary artists with exceptional cooking techniques, leadership abilities, and business acumen. They create high-quality dishes, manage kitchen teams effectively, and deliver memorable dining experiences.</p>
             </div>
 

@@ -14,11 +14,14 @@ const ChefCard = ({ chef }) => {
                 </LazyLoad>
 
                 <Card.Body>
-                    <Card.Title>{chefName}</Card.Title>
+                    <Card.Title className='fw-bold'>{chefName}</Card.Title>
                     <Card.Text>
-                        <p>Experience: <small>{yearsExperience} +Years</small></p>
-                        <p>Numbers of Recipes: <small>{numRecipes}</small></p>
-                        <p className='text-danger'><strong><FaThumbsUp></FaThumbsUp> Like:</strong> {likes}</p>
+                        <p className='fw-semibold text-muted'>Experience: <small>{yearsExperience} +Years</small></p>
+                        <p className='fw-semibold text-muted'>Numbers of Recipes: <small>{numRecipes}</small></p>
+                        <p className='text-danger fw-bold text-align-center'>
+                            <FaThumbsUp></FaThumbsUp> Like: <span>{likes}</span>
+
+                        </p>
                     </Card.Text>
                 </Card.Body>
                 <Link to={`/chefs/${id}`}>
